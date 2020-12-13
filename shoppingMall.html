@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myShoppingMall</title>
+    <style>
+        .wrapping_content {
+            width: 600px;
+            height: auto;
+            margin:0px auto;
+        }
+
+        .product-img {
+            max-width: 100%;
+        }
+
+
+        .order-information {
+            height: 400px;
+            width: 100%;
+        }
+
+        .info-box {
+            max-width: 100%;
+            height: 20%;
+            margin-bottom: 10px;
+
+
+        }
+
+        .info-input {
+            line-height: 51px;
+            width: 77%;
+            border-color: lightgrey;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+
+        }
+
+        .info-tag {
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            background-color: lightgrey;
+            height: 20%;
+            width: 20%;
+            display: inline-block;
+            text-align: center;
+            padding-top: 19px;
+            padding-bottom: 21px;
+            margin-right: -5px;
+        }
+        #order-btn{
+            position:absolute;
+            padding:10px;
+            left:50%;
+            background-color: dodgerblue;
+            color: white;
+            border-radius: 3px;
+
+            border:0;
+
+
+        }
+    </style>
+    <script>
+        function finOrder(){
+            alert("주문이 완료되었습니다.")
+        }
+    </script>
+</head>
+<body>
+<div class="wrapping_content">
+    <img class="product-img"
+         src="https://s14761.pcdn.co/wp-content/uploads/sites/3/2019/09/EXEPT-AERO-Custom-Made-Bike-Rennrad-Road-Bike-2020-001-810x540.jpg"/>
+
+
+    <div class="product-title">
+        <h1 class="title" style="display:inline">자전거를 팝니다</h1>
+        <p style="display:inline">가격: 2,000,000원/개</p>
+        <p>지갑을 열어보세요. 불어오는 바람이 더 이상 두렵지 않을 라이딩을 책임집니다.</p>
+    </div>
+
+    <div class="order-information">
+        <div class="info-box">
+            <p class="info-tag">주문자 이름</p>
+            <input class="info-input" type="text">
+        </div>
+        <div class="info-box">
+            <p class="info-tag">수량</p>
+            <input list="order-choice" class="info-input" type="text">
+            <datalist id="order-choice">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+            </datalist>
+
+        </div>
+        <div class="info-box">
+            <p class="info-tag">주소</p>
+            <input class="info-input" type="text">
+        </div>
+        <div class="info-box">
+            <p class="info-tag">전화번호</p>
+            <input class="info-input" type="text">
+        </div>
+        <button id="order-btn" onclick="finOrder()">주문하기</button>
+    </div>
+</div>
+
+</body>
+</html>
