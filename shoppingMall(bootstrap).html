@@ -24,9 +24,24 @@
 
 </style>
 <script>
-    function finOrder() {
-        alert('주문이 완료되었습니다');
-    }
+    function order() {
+            let order_name = $('#order-name').val();
+            let order_count = $('#order-count').val();
+            let order_address = $('#order-address').val();
+            let order_phone = $('#order-phone').val();
+            if (order_name == "") {
+                alert('이름을 입력해주세요.');
+            } else if (order_count == "") {
+                alert('수량을 입력해주세요.');
+            } else if (order_address == "") {
+                alert('주소을 입력해주세요.');
+            } else if (order_phone == "") {
+                alert('전화번호을 입력해주세요.');
+            } else {
+
+            }
+
+        }
 </script>
 <body>
 <div class="wrapping_content">
@@ -72,7 +87,7 @@
         </div>
 
         <div class="text-center">
-            <button id="btn-order" type="button" class="btn btn-primary" onclick="finOrder()">주문하기</button>
+            <button id="btn-order" type="button" class="btn btn-primary" onclick="order()">주문하기</button>
         </div>
     </div>
 </div>
